@@ -53,6 +53,7 @@ h3 {
 
 .section-container {
   padding: 3vw;
+  margin-top: 3vh;
 }
 
 .section-container hr {
@@ -75,9 +76,15 @@ h3 {
   padding: 1em;
   box-shadow: 0px 3px 10px gray;
   background-color: #FFFFFF;
+  margin-top: 3vh;
 }
 
 @media (min-width: 576px){
+
+  .section-container {
+    margin-top: 0;
+  }
+
   .section-holder{
     display: flex;
     justify-content: space-between;
@@ -90,6 +97,7 @@ h3 {
 
   .section-display-case{
     width: 40vw;
+    margin-top: 0;
   }
 }
 
@@ -185,6 +193,8 @@ h3 {
     width: 12vw;
     max-width: 100px;
   }
+
+
 }
 
 /*JavaScript Tricks*/
