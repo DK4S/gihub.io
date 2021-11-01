@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<header>
+  <title>Portfolio</title>
+  <meta name="description" content="DK's Web Development Portfolio.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap" rel="stylesheet">
+  <!-- Icon for hamburger menu (bars) and twitter logo -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  <link href="portfolio.css" type="text/css" rel="stylesheet">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-breakpoint-scale=1.0">
+</header>
+
+
+
+<body>
+
+  <div class="bg-dark intro-container">
+    <h1>Web Development Portfolio</h1>
+    <p>Technical Capabilities & Site Design Examples
+    <br>
+    <br>
+    By Dustin Kennedy
+    </p>
+  </div>
+  <div class="section-container">
+    <h2>Style & Substance</h2>
+    <br>
+    <p><strong>First Impressions.</strong> A website makes its first impression in an instant, relying on overall design principle and effective deployment of visual media. Those first fleeting moments establish the relationship between content and user.
+    </p>
+    <br>
+    <p><strong>But What About After That?</strong> Style needs substance to match. The goal of this portfolio is to move beyond first impressions by demonstrating attention to the UX throughout. Front end development is a praxis of communication. At its core a page must convey information in a clear and thoughtful manner.
+    </p>
+    <br>
+    <p>
+    <strong>Writing, Accelerated.</strong>  Web development is a writing technology with an extra dimension bolted onto it. The fundamentals of effective communication combine with everything under the hood to pass information to the user. Site responsiveness, page load speed, security, and accessibility are all key elements that support the User Experience. The internet is not just a two-way street -- it is a full-blown city grid with customs and culture of its own.
+    This is why I believe in the fundamental importance of best practice. Concise and comprehensible code helps navigate congestion.
+    </p>
+  </div>
+
+
+
+  <div class="bg-alt project-section-header">
+    <h2 class="" id="project-target">
+    </h2>
+  </div>
+
+  <div class="section-container">
+    <h2>Shopping Cart</h2>
+    <hr>
+    <div class="section-holder">
+      <div class="section-info">
+        <h3>Project Details</h3>
+        <p>My initial learning goal for JavaScript was to build a client-side shopping cart to handle User Interaction.
+        This vanilla JS solution uses browser localStorage capabilities to hold a JSON object that can be structured and delivered to a server as necessary, such as the paypal API, which would then handle security-critical information. This example is a simplified version of the integration, which is fully developed, tested with the PayPal sandbox, and ready to deploy.
+        </p>
+        <p>Understanding localStorage functionality has lead to other useful solutions, such as tracking pagevisits to trigger or suppress modal communication events.
+        </p>
+        <p>If you are interested in examining the localStorage state, this button will log it to the developer console.
+        </p>
+        <button onclick="consoleLogger();">Check Local Storage
+        </button>
+        <p><strong>A Note on Math</strong> - This cart uses a best-practice solution to JS floating point limitations by scaling the financial calculation to cents, allowing for tallying in whole integers.
+        </p>
+
+      </div>
+      <div class="section-display-case">
+        <p class="section-display-case-header"><strong>Example "smartcart" UI item container.</strong></p>
+        <div class="smartcart-tile">
+          <div class="smartcart-top-bar">
+            <p class="smartcart-item-title"><strong>Item #1</strong>
+            </p>
+            <button class="smartcart-clear" title="Clear Item" onclick="itemClear('item1')">&times;
+            </button>
+          </div>
+          <div class="smartcart-image"><img class="image-style" src="Portfolio Images/sunflower.jpg" alt="Image of Sunflower"></img>
+          </div>
+          <div class="smartcart-item-price">Item Price: $<span id="example-item-price"></span></div>
+          <div class="smartcart-info-panel">
+            <div class="smartcart-controls">
+              <button class="smartcart-minus" onclick="minusItem('item1');">-
+              </button>
+              <div id="smartcart-numInCart-target">0
+              </div>
+              <button class="smartcart-plus" onclick="plusItem('item1');">+
+              </button>
+            </div>
+            <div class="smartcart-total"><p>Total: $
+              <span id="smartcart-total-target">0.00</span></p>
+            </div>
+          </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <div class="section-container">
+    <h2>JavaScript Tricks</h2>
+    <hr>
+    <div class="section-holder">
+      <div class="section-info">
+        <h3>Inversion Three Ways</h3>
+        <p>Sometimes overcoming problems requires flexibility. The ACME Brand Word Encrypter takes this very literally, offering three unique solutions to the age old dilemma: how to invert a string.
+        </p>
+        <p><strong>Array Methods</strong> employs built-in JS methods .split(), .reverse(), and .join() to transform the string into an array and then back again.
+        </p>
+        <p><strong>Decrementing Loop</strong> progresses sequentially through the given string, saving each place value to another scoped output variable without changing data type.
+        </p>
+        <p><strong>Recursion</strong> uses self-reference to dig to the bottom of the input using JS string methods .substring() and .charAt() to trigger multiple return values in the stack.
+        </p>
+        <p>This task teaches flexibility in approach as well as nuance of process. A Functional Programing context would prohibit approaches that mutate data, for example, while program runtime might make one solution preferable for a given data set.
+        </p>
+      </div>
+      <div class="section-display-case">
+        <p class="section-display-case-header"><strong>ACME Brand Word Encrypter</strong>
+        </p>
+        <p>
+        Basic encryption to stump your low-level adversaries.
+          <br>
+          <br>
+          It's simple!
+          Just select a sneaky encryption standard, enter the secret codeword that needs protection, then
+          click 'mystify'.
+          <br>
+          <br>
+        </p>
+        <input name="stringInversion" type="radio" value="Array Methods" id="stringInversion1" checked><label for="stringInversion1"> Array Methods</label>
+        <br>
+        <input name="stringInversion" type="radio" value="Decrementing Loop" id="stringInversion2"><label for="stringInversion2"> Decrementing Loop</label>
+        <br>
+        <input name="stringInversion" type="radio" value="Recursion" id="stringInversion3"><label for="stringInversion3"> Recursion</label>
+        <br>
+        <br>
+        <input id="trick1" placeholder="Ex:'Operation Horse Radish'">
+        <button id="radioSelector" onclick="invertStringSorter(trick1.value);">mystify</button>
+        <br>
+        <br>
+        <div id="mystify_report">
+          <p><strong>Top Secret Report</strong>
+            <br>
+            <br>
+            Mystification Method: <span id="trick1_output_a"></span>
+            <br>
+            Result of Mystification: <span id="trick1_output_b"></span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="section-container">
+    <h2>Bootstrap v5.0 Implementation</h2>
+    <hr>
+      <div class="section-holder">
+        <div class="section-info">
+          <h3>Example Site Design: Uncle Salty's Restaurant</h3>
+          <p>Here is an example page design for a casual counter service restaurant currently under development in Crystal Lake, IL based on a laid-back &#39;beach bum&#39; persona named Uncle Salty. Mobile-first design was critical as most users will be ordering from their phone.
+          <br>
+
+          <br>
+          <br>Value of using Bootstrap front end framework:
+          <br>
+          <br>- It greatly facilitates mobile-first development by standardizing breakpoints.
+          <br>- Using class-based styling implies systematic vs. idiosyncratic css.
+          <br>- The developed nature of the framework means browser compatibility and accessibility principles are ready to go out of the box, saving development time and effort.
+          <br>
+          </p>
+          <br>
+          <h4>Chrome Lighthouse Score</h4>
+          <p>
+          <br>
+          Real world analysis of this deployed website's performance.
+          <br>
+          <br>
+          Note: SEO is limited because the owner of Uncle Salty's has not initiated social media accounts.
+          </p>
+          <img src="Portfolio Images/Uncle Salty's Lighthouse Report.png" alt="Chrome Lighthouse Report for Uncle Salty's website. 96 Performance, 93 Accessibility, 100 Best Practices, 90 SEO." class="image-style"></img>
+
+        </div>
+
+
+        <div class="section-display-case">
+          <p class="section-display-case-header"><strong>Uncle Salty's Website</strong></p>
+          <div class="">
+            <a target="_blank" href="https://unclesaltys.com"><img class="image-style" src="Portfolio Images/Uncle Saltys.png" alt="Thumbnail of Uncle Salty's landing page."></img></a>
+          </div>
+        </div>
+      </div>
+  </div>
+
+  <div class="section-container">
+    <h2>Folly X.O.</h2>
+    <hr>
+      <div class="section-holder">
+        <div class="section-info">
+          <h3>My Independent Press</h3>
+          <p>Launching Folly X.O. was my main reason to get back into coding. My first website was on Geocities circa 1995, and my first programing language was QBasic. This time around I set out to create a professional website deployment from the ground up to support my small business needs.
+          <br>
+
+          <br>
+          <br>Skills Obtained:
+          <br>
+          <br>- HTML / CSS / JavaScript.
+          <br>- Site security with HTTPS encryption.
+          <br>- Google Domains, including CNAME and DNS configuration.
+          <br>- Google Knowledge Panel for businesses, including SEO optimization.
+          <br>- Github.
+          <br>- Apache Server configuration basics.
+          <br>- Rudimentary PHP.
+          </p>
+          <br>
+          <h4>Chrome Lighthouse Score</h4>
+          <p>
+          <br>
+          Real world analysis of this deployed website's performance.
+          <br>
+          <br>
+          </p>
+          <img src="Portfolio Images/FollyXO Lighthouse Report.png" alt="Chrome Lighthouse Report for Folly X.O. website. 99 Performance, 98 Accessibility, 100 Best Practices, 95 SEO." class="image-style"></img>
+
+        </div>
+
+
+        <div class="section-display-case">
+          <p class="section-display-case-header"><strong>Folly X.O.</strong></p>
+          <div class="">
+            <a target="_blank" href="https://www.follyxo.com"><img class="image-style" src="Portfolio Images/FollyXO.png" alt="Thumbnail of Folly X.O.'s landing page."></img></a>
+          </div>
+        </div>
+      </div>
+  </div>
+
+<!--Portfolio Development Area-->
+<!--
+  <div class="section-container">
+    <h2>JQuery</h2>
+    <hr>
+      <p>
+
+    </p>
+  </div>
+
+  <div class="section-container">
+  <h2>Art gallery div, eventually.</h2>
+  <hr>
+  </div>
+
+  <div class="section-container">
+    <h2>A form that actually does stuff.</h2>
+    <hr>
+  </div>
+
+  <div class="section-container">
+    <h2>Visual design shapes.</h2>
+    <hr>
+  </div>
+-->
+<div class="breakpoint-scale bg-alt">
+  <h2>Screen Width Scale for Breakpoint Development</h2>
+
+  <p>I created this tool as a simple way to visually track screen breakpoints during mobile-first
+  page development. It causes width scroll, but the tradeoff is having an easy cue to judge viability of current design layout
+  or to understand the need for a @media css change.</p>
+  <div class="xs">Mobile Default <= 576px</div>
+  <div class="sm">Small <= 768px</div>
+  <div class="md">Md <= 992px</div>
+  <div class="lg">Large <= 1200px</div>
+</div>
+
+<script src="portfolio.js"></script>
+
+<footer class="bg-dark">
+</footer>
+
+
+</body>
+
+
+</html>
